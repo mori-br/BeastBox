@@ -3,7 +3,7 @@ Desktop Configuration Software
 
 The BeastBox is hardware that allows you to play PLAYSTATION 3/4 using a keyboard and mouse. This project was written in c++ using QT Library.
 
-![alt tag](https://github.com/mori-br/BeastBox/master/beast.jpg)
+![alt tag](beast.jpg "BeastBox screenshots")
 
 
 To know more about the project, **http://softfactory.com.br**.
