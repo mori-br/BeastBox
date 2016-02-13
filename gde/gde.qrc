@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/arrow_down1.png</file>
+        <file>images/noimage.png</file>
+        <file>images/scroll_down.png</file>
+        <file>images/scroll_up.png</file>
+        <file>images/top.png</file>
+        <file>images/buttons/btn_circle.png</file>
+        <file>images/buttons/btn_cross.png</file>
+        <file>images/buttons/btn_down.png</file>
+        <file>images/buttons/btn_l1.png</file>
+        <file>images/buttons/btn_l2.png</file>
+        <file>images/buttons/btn_l3.png</file>
+        <file>images/buttons/btn_left.png</file>
+        <file>images/buttons/btn_opt.png</file>
+        <file>images/buttons/btn_ps.png</file>
+        <file>images/buttons/btn_r1.png</file>
+        <file>images/buttons/btn_r2.png</file>
+        <file>images/buttons/btn_r3.png</file>
+        <file>images/buttons/btn_right.png</file>
+        <file>images/buttons/btn_sel.png</file>
+        <file>images/buttons/btn_square.png</file>
+        <file>images/buttons/btn_start.png</file>
+        <file>images/buttons/btn_touch.png</file>
+        <file>images/buttons/btn_triangle.png</file>
+        <file>images/buttons/btn_up.png</file>
+        <file>images/buttons/btn_share.png</file>
+        <file>translations/app.pt_BR.qm</file>
+        <file>translations/app.pt_BR.ts</file>
+    </qresource>
+</RCC>

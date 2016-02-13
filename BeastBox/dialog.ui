@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>430</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>430</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>430</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Title</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+	background-color: #111;
+}
+
+QProgressBar {
+	background-color: #111;
+	border-color: #333;
+	border-width: 1px;
+	border-style: solid;
+	color:white;
+}
+
+QMessageBox {
+	background-color: #111;
+	color:white;
+}
+</string>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>432</width>
+     <height>546</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetNoConstraint</enum>
+    </property>
+    <item>
+     <widget class="QLabel" name="ImageHeader">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="BeastBox.qrc">:/images/top.png</pixmap>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabWidget {
+	border: 0px solid #111;
+background: #222;
+}
+
+QTabWidget::pane {
+     border-top: 0px solid #111;
+     position: absolute;
+ }
+
+QTabBar {
+    background: #111;
+    color: #666;
+    border-radius: 0;
+    border: 2px solid #111;
+}
+
+QTabBar::tab:top {
+    margin: 0px 0px 0 0;
+    padding: 12px 15px;
+    border-top: 3px solid transparent;
+    background: #111;
+}
+ 
+QTabBar::tab:selected {
+    color: white;
+	background: #222;
+    border: 0;
+}
+
+QTabBar::tab:!enabled {
+    color: #666;
+    border: 0;
+}
+ 
+QTabBar::tab:top:hover {
+        border-top: 3px solid #444;
+}
+QTabBar::tab:top:selected {
+ border-top: 3px solid #1086e2;
+}
+ 
+QTabBar::tab:hover,
+QTabBar::tab:focus {
+	
+}
+
+QWidget#tab1 {
+	background-color: #222;
+	border: 0px solid #222;
+}
+QWidget#tab2 {
+	background-color: #222;
+	border: 0px solid #222;
+}
+QWidget#tab3 {
+	background-color: #222;
+	border: 0px solid #222;
+}
+QWidget#tab4 {
+	background-color: #222;
+	border: 0px solid #222;
+}
+
+QToolButton {
+	background-color: #111;
+	color: white;
+	border-style: outset;	
+	border: 1px solid #444;
+}
+
+QToolButton:hover{
+	background-color: #222;
+	color: #1086e2;
+	border: 1px solid #444;
+}
+
+QToolButton:!enabled {
+	color: #999;
+}
+
+QLabel:disabled {
+	color: #999;
+}
+
+QLabel {
+	background-color: #222;
+	color: white;
+}
+
+QProgressBar {
+	background-color: #111;
+	border-color: #333;
+	border-width: 1px;
+	border-style: solid;
+	color:white;
+}
+
+QProgressBar::chunk {
+    background-color: #1086e2;
+    width: 10px;
+    margin: 0.5px;
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab1">
+       <attribute name="title">
+        <string>PROFILES</string>
+       </attribute>
+       <widget class="QToolButton" name="btn_delProfile">
+        <property name="geometry">
+         <rect>
+          <x>175</x>
+          <y>260</y>
+          <width>80</width>
+          <height>66</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Delete</string>
+        </property>
+        <property name="icon">
+         <iconset resource="BeastBox.qrc">
+          <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="btn_newProfile">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>260</y>
+          <width>81</width>
+          <height>66</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>New</string>
+        </property>
+        <property name="icon">
+         <iconset resource="BeastBox.qrc">
+          <normaloff>:/images/new.png</normaloff>:/images/new.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="btn_cloneProfile">
+        <property name="geometry">
+         <rect>
+          <x>259</x>
+          <y>260</y>
+          <width>81</width>
+          <height>66</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Clone</string>
+        </property>
+        <property name="icon">
+         <iconset resource="BeastBox.qrc">
+          <normaloff>:/images/copy.png</normaloff>:/images/copy.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+       <widget class="QProgressBar" name="pb_profiles">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>335</y>
+          <width>241</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QProgressBar {
+	background-color: #111;
+	border-color: #333;
+	border-width: 1px;
+	border-style: solid;
+	color:white;
+};</string>
+        </property>
+        <property name="value">
+         <number>50</number>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="textVisible">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>335</y>
+          <width>136</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}
+
+QLabel:disabled
+{
+	color:#999;
+}</string>
+        </property>
+        <property name="text">
+         <string>Device Storage Usage:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QListWidget" name="lst_profiles">
+        <property name="geometry">
+         <rect>
+          <x>7</x>
+          <y>5</y>
+          <width>415</width>
+          <height>251</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QListWidget  {
+	background-color: rgb(0, 0, 0);
+}
+
+QScrollBar:vertical  {
+    background: #111;
+	border: 0;
+	width: 20px;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical  {
+    border: 0;
+	margin: 0 0 0 0;
+}
+
+ QScrollBar::handle:vertical  {
+     background: #333;
+	 margin: 20px 0 20px 0;
+ }
+ 
+ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical  {
+     background: none;
+ }
+
+ QScrollBar::sub-line:vertical  {
+     border: 0px solid grey;
+ 	 image: url(:/images/scroll_up.png);
+     subcontrol-position: top;
+     subcontrol-origin: content;
+ }
+
+ QScrollBar::add-line:vertical  {
+     border: 0px solid grey;
+	 image: url(:/images/scroll_down.png);
+     subcontrol-position: bottom;
+     subcontrol-origin: content;
+ }
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="btn_edtProfile">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>260</y>
+          <width>81</width>
+          <height>66</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Edit</string>
+        </property>
+        <property name="icon">
+         <iconset resource="BeastBox.qrc">
+          <normaloff>:/images/edit.png</normaloff>:/images/edit.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="btn_updProfile">
+        <property name="geometry">
+         <rect>
+          <x>344</x>
+          <y>260</y>
+          <width>81</width>
+          <height>66</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Update</string>
+        </property>
+        <property name="icon">
+         <iconset resource="BeastBox.qrc">
+          <normaloff>:/images/upload.png</normaloff>:/images/upload.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab3">
+       <attribute name="title">
+        <string>FIRMWARE</string>
+       </attribute>
+       <widget class="QProgressBar" name="pb_firmware">
+        <property name="geometry">
+         <rect>
+          <x>125</x>
+          <y>80</y>
+          <width>271</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QProgressBar {
+	background-color: #111;
+	border-color: #333;
+	border-width: 1px;
+	border-style: solid;
+	color:white;
+margin: 0.5px;
+};</string>
+        </property>
+        <property name="value">
+         <number>50</number>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="textVisible">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>35</x>
+          <y>50</y>
+          <width>71</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="BeastBox.qrc">:/images/firmware.png</pixmap>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>35</x>
+          <y>300</y>
+          <width>356</width>
+          <height>46</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}
+
+QLabel:disabled
+{
+	color:#999;
+}
+
+</string>
+        </property>
+        <property name="inputMethodHints">
+         <set>Qt::ImhMultiLine</set>
+        </property>
+        <property name="text">
+         <string>NOTE: During firmware update DO NOT turn off or disconnect device from computer.</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="btn_update">
+        <property name="geometry">
+         <rect>
+          <x>35</x>
+          <y>235</y>
+          <width>121</width>
+          <height>56</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton {
+	padding-left:10;
+	padding-right:10;
+}</string>
+        </property>
+        <property name="text">
+         <string>   Update</string>
+        </property>
+        <property name="icon">
+         <iconset resource="BeastBox.qrc">
+          <normaloff>:/images/update.png</normaloff>:/images/update.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>39</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextBesideIcon</enum>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="btn_load">
+        <property name="geometry">
+         <rect>
+          <x>35</x>
+          <y>165</y>
+          <width>121</width>
+          <height>56</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton {
+padding-left:10;
+}</string>
+        </property>
+        <property name="text">
+         <string>   Load...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="BeastBox.qrc">
+          <normaloff>:/images/open.png</normaloff>:/images/open.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>39</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextBesideIcon</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_update_text">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>50</y>
+          <width>261</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}
+
+QLabel:disabled
+{
+	color:#999;
+}
+
+</string>
+        </property>
+        <property name="inputMethodHints">
+         <set>Qt::ImhMultiLine</set>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="Line" name="line">
+        <property name="geometry">
+         <rect>
+          <x>35</x>
+          <y>145</y>
+          <width>356</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="btn_switch">
+        <property name="geometry">
+         <rect>
+          <x>255</x>
+          <y>165</y>
+          <width>136</width>
+          <height>126</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Switch between
+DFU and HID mode</string>
+        </property>
+        <property name="icon">
+         <iconset resource="BeastBox.qrc">
+          <normaloff>:/images/update.png</normaloff>:/images/update.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab4">
+       <attribute name="title">
+        <string>ABOUT</string>
+       </attribute>
+       <widget class="QLabel" name="lbl_version">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>191</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}
+
+QLabel:disabled
+{
+	color:#999;
+}
+
+</string>
+        </property>
+        <property name="text">
+         <string>version</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_versionFirmware">
+        <property name="geometry">
+         <rect>
+          <x>225</x>
+          <y>10</y>
+          <width>191</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string>version</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textEdit">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>35</y>
+          <width>416</width>
+          <height>331</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit {
+	background-color: #111;
+	color: rgb(85, 170, 255);
+}
+
+QScrollBar:vertical  {
+    background: #111;
+	border: 0;
+	width: 20px;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical  {
+    border: 0;
+	margin: 0 0 0 0;
+}
+
+ QScrollBar::handle:vertical  {
+     background: #333;
+	 margin: 20px 0 20px 0;
+ }
+ 
+ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical  {
+     background: none;
+ }
+
+ QScrollBar::sub-line:vertical  {
+     border: 0px solid grey;
+ 	 image: url(:/images/scroll_up.png);
+     subcontrol-position: top;
+     subcontrol-origin: content;
+ }
+
+ QScrollBar::add-line:vertical  {
+     border: 0px solid grey;
+	 image: url(:/images/scroll_down.png);
+     subcontrol-position: bottom;
+     subcontrol-origin: content;
+ }
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="undoRedoEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="lbl_status">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>520</y>
+     <width>435</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>10</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>btn_delProfile</tabstop>
+  <tabstop>btn_newProfile</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>btn_cloneProfile</tabstop>
+  <tabstop>lst_profiles</tabstop>
+  <tabstop>btn_edtProfile</tabstop>
+  <tabstop>btn_updProfile</tabstop>
+  <tabstop>btn_switch</tabstop>
+ </tabstops>
+ <resources>
+  <include location="BeastBox.qrc"/>
+ </resources>
+ <connections/>
+</ui>
