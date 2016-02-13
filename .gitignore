@@ -26,3 +26,7 @@
 *.exe
 *.out
 *.app
+
+# QT user preferences
+*.user
+*.user.*
