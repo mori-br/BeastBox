@@ -257,9 +257,9 @@ bool DFUHandler::download(const uint16_t interface, DFUseFile *file, IOperationL
         {
             ImageElement *ie = tp->getElement(i);
 
-            QLog_Debug("Default", QString().sprintf("address 0x%08x", ie->_dwElementAddress));
-            QLog_Debug("Default", QString().sprintf("size %d", ie->_dwElementSize));
-            QLog_Debug("Default", QString().sprintf("xfer size %d", _dfuDesc.wTransferSize));
+            QLog_Debug("Default", QString().sprintf("address   0x%08x", ie->_dwElementAddress));
+            QLog_Debug("Default", QString().sprintf("size      0x%08x (%d)", ie->_dwElementSize, ie->_dwElementSize));
+            QLog_Debug("Default", QString().sprintf("xfer size 0x%08x (%d)", _dfuDesc.wTransferSize, _dfuDesc.wTransferSize));
 
             uint16_t steps = (ie->_dwElementSize/_dfuDesc.wTransferSize)+
                 ((ie->_dwElementSize%_dfuDesc.wTransferSize) > 0 ? 1 : 0);
@@ -378,12 +378,14 @@ bool DFUHandler::download(const uint16_t interface, DFUseFile *file, IOperationL
 
                     SLEEP(status._bwPollTimeout);
 
-                    return true;
+//                    return true;
                 }
             }
-
-            QLog_Error("Default", "SECTOR NOT FOUND !");
+            else
+                QLog_Error("Default", "SECTOR NOT FOUND !");
         }
+ return true;
+
     }
 
     return false;

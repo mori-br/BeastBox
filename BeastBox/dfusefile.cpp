@@ -54,9 +54,10 @@ TargetPrefix::TargetPrefix( const TargetPrefix* other )
     _bAlternateSetting = other->_bAlternateSetting;
     _dwTargetSize = other->_dwTargetSize;
     _dwNbElements = other->_dwNbElements;
+    _bTargetNamed = other->_bTargetNamed;
 
-    memcpy(_bTargetNamed, other->_bTargetNamed, 4);
-    memcpy(_szTargetName, other->_szTargetName, 254);
+    memcpy(_filler, other->_filler, 3);
+    memcpy(_szTargetName, other->_szTargetName, 255);
 }
 
 TargetPrefix& TargetPrefix::operator=( const TargetPrefix& other )
@@ -64,9 +65,10 @@ TargetPrefix& TargetPrefix::operator=( const TargetPrefix& other )
     _bAlternateSetting = other._bAlternateSetting;
     _dwTargetSize = other._dwTargetSize;
     _dwNbElements = other._dwNbElements;
+    _bTargetNamed = other._bTargetNamed;
 
-    memcpy(_bTargetNamed, other._bTargetNamed, 4);
-    memcpy(_szTargetName, other._szTargetName, 254);
+    memcpy(_filler, other._filler, 3);
+    memcpy(_szTargetName, other._szTargetName, 255);
 
     return *this;
 }
@@ -342,8 +344,8 @@ bool DFUseFile::loadTargets(int totalTargets)
     {
 		QSharedPointer<TargetPrefix> target = _targets.at(a);
 
-        QLog_Debug("Default", QString().sprintf("_bAlternateSetting 0x%02X, %s, %s, %d, %d",
-                   target->_bAlternateSetting, (char*)target->_bTargetNamed,
+        QLog_Debug("Default", QString().sprintf("_bAlternateSetting 0x%02X, %d, %s, %d, %d",
+                   target->_bAlternateSetting, target->_bTargetNamed,
                     (char*)target->_szTargetName, target->_dwTargetSize, target->_dwNbElements));
 
         QLog_Debug("Default", QString("Num elements: %1").arg(target->_dwNbElements));

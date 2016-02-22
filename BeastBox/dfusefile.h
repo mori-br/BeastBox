@@ -53,8 +53,9 @@ public:
 
 //BYTE SIGNATURE - "Target"
     uint8_t  _bAlternateSetting;
-    uint8_t  _bTargetNamed[4];
-    uint8_t  _szTargetName[254];
+    uint8_t  _bTargetNamed;
+    uint8_t  _filler[3];
+    uint8_t  _szTargetName[255];
     uint32_t _dwTargetSize;
     uint32_t _dwNbElements;
 
