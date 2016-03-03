@@ -22,7 +22,7 @@ along with this program; if not, please visit www.gnu.org.
 #define VERSION_H
 
 
-#define PROG_VERSION        "1.00"
+#define PROG_VERSION        "1.01"
 
 #define DEVICE_NAME         "BeastBox"
 
